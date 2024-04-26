@@ -1,6 +1,8 @@
 package hr.tvz.android.listarafajec
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,8 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var carArrayList: ArrayList<Car>
     lateinit var imageId : Array<Int>
-    lateinit var heading : Array<String>
-
+    lateinit var cars : ArrayList<Car>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -34,17 +35,72 @@ class MainActivity : AppCompatActivity() {
         )
 
         carArrayList = ArrayList()
-        carArrayList.add(Car("Toyota", "Corolla", 2020, 150, imageId[0]))
-        carArrayList.add(Car("Honda", "Civic", 2019, 140, imageId[1]))
-        carArrayList.add(Car("Ford", "Focus", 2018, 160, imageId[2]))
-        carArrayList.add(Car("Chevrolet", "Camaro", 2017, 300, imageId[3]))
-        carArrayList.add(Car("BMW", "3 Series", 2021, 200, imageId[4]))
+        carArrayList.add(
+            Car(
+                resources.getStringArray(R.array.corolla)[0], // Toyota
+                resources.getStringArray(R.array.corolla)[1], // Corolla
+                resources.getStringArray(R.array.corolla)[2].toInt(), // 2023
+                resources.getStringArray(R.array.corolla)[3].toInt(), // 150
+                imageId[0]
+            )
+        )
+        carArrayList.add(
+            Car(
+                resources.getStringArray(R.array.civic)[0], // Honda
+                resources.getStringArray(R.array.civic)[1], // Civic
+                resources.getStringArray(R.array.civic)[2].toInt(), // 2023
+                resources.getStringArray(R.array.civic)[3].toInt(), // 158
+                imageId[1]
+            )
+        )
+        carArrayList.add(
+            Car(
+                resources.getStringArray(R.array.focus)[0], // Ford
+                resources.getStringArray(R.array.focus)[1], // Focus
+                resources.getStringArray(R.array.focus)[2].toInt(), // 2023
+                resources.getStringArray(R.array.focus)[3].toInt(), // 123
+                imageId[2]
+            )
+        )
+        carArrayList.add(
+            Car(
+                resources.getStringArray(R.array.camaro)[0], // Chevrolet
+                resources.getStringArray(R.array.camaro)[1], // Camaro
+                resources.getStringArray(R.array.camaro)[2].toInt(), // 2023
+                resources.getStringArray(R.array.camaro)[3].toInt(), // 275
+                imageId[3]
+            )
+        )
+        carArrayList.add(
+            Car(
+                resources.getStringArray(R.array.bmw3)[0], // BMW
+                resources.getStringArray(R.array.bmw3)[1], // 3 Series
+                resources.getStringArray(R.array.bmw3)[2].toInt(), // 2023
+                resources.getStringArray(R.array.bmw3)[3].toInt(), // 248
+                imageId[4]
+            )
+        )
 
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
 
-        recyclerView.adapter = CarAdapter(carArrayList)
+        var adapter = CarAdapter(carArrayList)
+        recyclerView.adapter = adapter
+        adapter.setOnItemClickListener(object : CarAdapter.onItemClickListener {
+            override fun onItemClick(position: Int) {
+                //Toast.makeText(this@MainActivity, "You clicked item no. ${position + 1}", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this@MainActivity, CarDetail::class.java)
+                /*intent.putExtra("heading", "${carArrayList[position].make} ${carArrayList[position].model}")
+                intent.putExtra("imageId", carArrayList[position].titleImage)
+                intent.putExtra("year", carArrayList[position].year)
+                intent.putExtra("hp", carArrayList[position].horsePower)*/
+                intent.putExtra("car", carArrayList[position])
+
+                startActivity(intent)
+            }
+        })
     }
 
 

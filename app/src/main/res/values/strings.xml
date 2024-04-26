@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">ListaRafajec</string>
+
+    <string-array name="corolla">
+        <item>Toyota</item>
+        <item>Corolla</item>
+        <item>2023</item>
+        <item>150</item>
+    </string-array>
+
+    <string-array name="civic">
+        <item>Honda</item>
+        <item>Civic</item>
+        <item>2023</item>
+        <item>158</item>
+    </string-array>
+
+    <string-array name="focus">
+        <item>Ford</item>
+        <item>Focus</item>
+        <item>2023</item>
+        <item>123</item>
+    </string-array>
+
+    <string-array name="camaro">
+        <item>Chevrolet</item>
+        <item>Camaro</item>
+        <item>2023</item>
+        <item>275</item>
+    </string-array>
+
+    <string-array name="bmw3">
+        <item>BMW</item>
+        <item>3 Series</item>
+        <item>2023</item>
+        <item>248</item>
+    </string-array>
 </resources>
