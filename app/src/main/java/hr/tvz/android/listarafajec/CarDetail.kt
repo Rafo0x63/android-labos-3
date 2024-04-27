@@ -24,6 +24,7 @@ class CarDetail : AppCompatActivity() {
         val carImage : ImageView = binding.image
         val carYear : TextView = binding.year
         val carHp : TextView = binding.horsepower
+        val carDesc : TextView = binding.description
 
         val bundle : Bundle?= intent.extras
         /*
@@ -39,5 +40,6 @@ class CarDetail : AppCompatActivity() {
         carImage.setImageResource(car.titleImage)
         carYear.text = car.year.toString()
         carHp.text = car.horsePower.toString()
+        carDesc.text = car.description
     }
 }

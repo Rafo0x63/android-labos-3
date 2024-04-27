@@ -6,6 +6,7 @@
         <item>Corolla</item>
         <item>2023</item>
         <item>150</item>
+        <item>The Toyota Corolla, a perennial favorite, continues its legacy of reliability and efficiency into 2023. With its sleek design and advanced technology, the Corolla offers a comfortable and fuel-efficient ride suitable for urban commutes or long-distance travels.</item>
     </string-array>
 
     <string-array name="civic">
@@ -13,6 +14,7 @@
         <item>Civic</item>
         <item>2023</item>
         <item>158</item>
+        <item>The Honda Civic, a symbol of practicality and performance, returns in 2023 with refreshed style and enhanced features. Renowned for its spacious interior, smooth handling, and fuel efficiency, the Civic remains a top choice for those seeking a blend of comfort and excitement on the road.</item>
     </string-array>
 
     <string-array name="focus">
@@ -20,6 +22,7 @@
         <item>Focus</item>
         <item>2023</item>
         <item>123</item>
+        <item>The Ford Focus epitomizes versatility and agility in the compact car segment. With its responsive handling, ample cargo space, and modern amenities, the Focus is designed to elevate your driving experience, whether navigating city streets or embarking on weekend adventures.</item>
     </string-array>
 
     <string-array name="camaro">
@@ -27,6 +30,7 @@
         <item>Camaro</item>
         <item>2023</item>
         <item>275</item>
+        <item>The Chevrolet Camaro embodies American muscle car heritage with a contemporary twist. In 2023, it roars onto the scene with breathtaking performance and head-turning style. From its powerful engine options to its refined interior, the Camaro offers an exhilarating driving experience that\'s bound to leave a lasting impression.</item>
     </string-array>
 
     <string-array name="bmw3">
@@ -34,5 +38,7 @@
         <item>3 Series</item>
         <item>2023</item>
         <item>248</item>
+        <item>The BMW 3 Series sets the benchmark for luxury compact sedans, blending elegance with dynamic performance. As a symbol of driving pleasure, the 3 Series combines cutting-edge technology with precision engineering to deliver a thrilling ride. Whether cruising along the highway or tackling winding roads, this iconic BMW continues to captivate drivers with its sophisticated design and unmatched performance.</item>
     </string-array>
+
 </resources>
