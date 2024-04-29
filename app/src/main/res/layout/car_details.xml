@@ -32,7 +32,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Horsepower: "
+            android:text="@string/horsepower"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Year: "
+            android:text="@string/year"
             android:textSize="20dp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -63,8 +63,33 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/description"/>
+            android:id="@+id/description"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center_vertical">
 
+        <Button
+            android:id="@+id/youtubeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="YouTube" />
+
+        <ImageButton
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/share"
+            android:onClick="onShareButtonClicked"
+            android:src="@mipmap/ic_share" />
+    </LinearLayout>
 </LinearLayout>

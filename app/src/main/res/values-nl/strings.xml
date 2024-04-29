@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">ListaRafajec</string>
+
+    <string-array name="corolla">
+        <item>Toyota</item>
+        <item>Corolla</item>
+        <item>2023</item>
+        <item>150</item>
+        <item>De Toyota Corolla, een eeuwige favoriet, gaat zijn erfenis van betrouwbaarheid en efficiëntie voort in 2023. Met zijn gestroomlijnde ontwerp en geavanceerde technologie biedt de Corolla een comfortabele en zuinige rit geschikt voor stadsritten of lange afstanden.</item>
+    </string-array>
+
+    <string-array name="civic">
+        <item>Honda</item>
+        <item>Civic</item>
+        <item>1995</item>
+        <item>90</item>
+        <item>De Honda Civic, een symbool van praktisch nut en prestaties, keert terug in 2023 met een verfrissende stijl en verbeterde functies. Bekend om zijn ruime interieur, soepele handling en brandstofefficiëntie, blijft de Civic een topkeuze voor degenen die een combinatie van comfort en opwinding op de weg zoeken.</item>
+    </string-array>
+
+    <string-array name="focus">
+        <item>Ford</item>
+        <item>Focus</item>
+        <item>2023</item>
+        <item>123</item>
+        <item>De Ford Focus belichaamt veelzijdigheid en wendbaarheid in het segment van compacte auto\'s. Met zijn responsieve handling, ruime bagageruimte en moderne voorzieningen is de Focus ontworpen om uw rijervaring te verbeteren, of u nu door de stad rijdt of weekendavonturen onderneemt.</item>
+    </string-array>
+
+    <string-array name="camaro">
+        <item>Chevrolet</item>
+        <item>Camaro</item>
+        <item>2023</item>
+        <item>275</item>
+        <item>De Chevrolet Camaro belichaamt Amerikaans muscle car-erfgoed met een eigentijdse twist. In 2023 verschijnt hij met adembenemende prestaties en opvallende stijl. Van zijn krachtige motoropties tot zijn verfijnde interieur biedt de Camaro een opwindende rijervaring die een blijvende indruk zal maken.</item>
+    </string-array>
+
+    <string-array name="bmw3">
+        <item>BMW</item>
+        <item>3 Serie</item>
+        <item>2023</item>
+        <item>248</item>
+        <item>De BMW 3 Serie zet de standaard voor luxe compacte sedans door elegantie te combineren met dynamische prestaties. Als symbool van rijplezier combineert de 3 Serie geavanceerde technologie met precisie-engineering om een opwindende rit te leveren. Of u nu over de snelweg rijdt of bochtige wegen trotseert, deze iconische BMW blijft bestuurders boeien met zijn verfijnde ontwerp en ongeëvenaarde prestaties.</item>
+    </string-array>
+
+    <string name="share">Delen</string>
+    <string name="shareContent">"Inhoud delen "</string>
+    <string name="confirm">Wil je deze inhoud delen?</string>
+    <string name="cancel">Annuleren</string>
+    <string name="horsepower">"Paardenkracht: "</string>
+    <string name="year">"Jaar: "</string>
+</resources>

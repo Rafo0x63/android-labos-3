@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">ListaRafajec</string>
+
+    <string-array name="corolla">
+        <item>Toyota</item>
+        <item>Corolla</item>
+        <item>2023</item>
+        <item>150</item>
+        <item>Toyota Corolla, večita omiljena, nastavlja svoje naslijeđe pouzdanosti i učinkovitosti u 2023. godini. Sa svojim elegantnim dizajnom i naprednom tehnologijom, Corolla nudi udobnu i ekonomičnu vožnju pogodnu za gradske vožnje ili putovanja na dugim relacijama.</item>
+    </string-array>
+
+    <string-array name="civic">
+        <item>Honda</item>
+        <item>Civic</item>
+        <item>1995</item>
+        <item>90</item>
+        <item>Honda Civic, simbol praktičnosti i performansi, vraća se u 2023. godinu s osvježenim stilom i unaprijeđenim značajkama. Poznat po prostranom interijeru, glatkom upravljivosti i ekonomičnosti goriva, Civic ostaje vrhunski izbor za one koji traže kombinaciju udobnosti i uzbuđenja na cesti.</item>
+    </string-array>
+
+    <string-array name="focus">
+        <item>Ford</item>
+        <item>Focus</item>
+        <item>2023</item>
+        <item>123</item>
+        <item>Ford Focus oličenje je svestranosti i okretnosti u segmentu kompaktnih automobila. Sa svojom reaktivnom upravljivošću, prostranim prostorom za prtljagu i modernim sadržajima, Focus je dizajniran da unaprijedi vaše iskustvo vožnje, bilo da se krećete gradskim ulicama ili odlazite na vikend avanture.</item>
+    </string-array>
+
+    <string-array name="camaro">
+        <item>Chevrolet</item>
+        <item>Camaro</item>
+        <item>2023</item>
+        <item>275</item>
+        <item>Chevrolet Camaro utjelovljuje američko nasljeđe muscle automobila s modernim pristupom. U 2023. godini, pojavljuje se s zadivljujućom izvedbom i privlačnim stilom. Od moćnih opcija motora do rafiniranog interijera, Camaro nudi uzbuđujuće iskustvo vožnje koje će sigurno ostaviti trajan dojam.</item>
+    </string-array>
+
+    <string-array name="bmw3">
+        <item>BMW</item>
+        <item>3 Series</item>
+        <item>2023</item>
+        <item>248</item>
+        <item>BMW serije 3 postavlja standard za luksuzne kompaktne limuzine, spajajući eleganciju s dinamičnom izvedbom. Kao simbol užitka u vožnji, serija 3 kombinira naprednu tehnologiju s preciznim inženjeringom kako bi pružila uzbudljivu vožnju. Bilo da krstarite autocestom ili se borite s krivudavim cestama, ovaj ikonični BMW nastavlja očaravati vozače svojim sofisticiranim dizajnom i neusporedivom izvedbom.</item>
+    </string-array>
+
+    <string name="share">Dijeli</string>
+    <string name="shareContent">Podijeli</string>
+    <string name="confirm">Želite li podijeliti sadržaj?</string>
+    <string name="cancel">Otkaži</string>
+    <string name="horsepower">"Snaga: "</string>
+    <string name="year">"Godina: "</string>
+</resources>

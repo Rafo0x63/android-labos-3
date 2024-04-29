@@ -1,10 +1,14 @@
 package hr.tvz.android.listarafajec
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import hr.tvz.android.listarafajec.databinding.ActivityMainBinding
 import hr.tvz.android.listarafajec.databinding.CarDetailsBinding
@@ -20,6 +24,7 @@ class CarDetail : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
         val carHeading : TextView = binding.heading
         val carImage : ImageView = binding.image
         val carYear : TextView = binding.year
@@ -27,12 +32,6 @@ class CarDetail : AppCompatActivity() {
         val carDesc : TextView = binding.description
 
         val bundle : Bundle?= intent.extras
-        /*
-        val heading = bundle!!.getString("heading")
-        val imageId = bundle.getInt("imageId")
-        val year = bundle.getInt("year")
-        val hp = bundle.getInt("hp")*/
-
         val car = bundle!!.getParcelable("car", Car::class.java)
         println("CAR IMAGE ID ------------------------ ${car!!.titleImage} ${car.make} ${car.model} ${car.year} ${car.horsePower}")
 
@@ -41,5 +40,45 @@ class CarDetail : AppCompatActivity() {
         carYear.text = car.year.toString()
         carHp.text = car.horsePower.toString()
         carDesc.text = car.description
+
+        val imageView: ImageView = binding.image
+
+        imageView.setOnClickListener {
+            val intent = Intent(this@CarDetail, ImageActivity::class.java)
+            intent.putExtra("imageId", car.titleImage)
+            startActivity(intent)
+        }
+
+        val ytBtn = binding.youtubeBtn
+        ytBtn.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://www.youtube.com/")
+            startActivity(intent)
+        }
+
+        val shareBtn = binding.shareBtn
+
+        shareBtn.setOnClickListener {
+            showShareDialog()
+        }
+    }
+
+    private fun showShareDialog() {
+        AlertDialog.Builder(this)
+            .setTitle(resources.getString(R.string.shareContent))
+            .setMessage(resources.getString(R.string.confirm))
+            .setPositiveButton(resources.getString(R.string.share)) { dialog, _ ->
+                sendCustomBroadcast()
+                dialog.dismiss()
+            }
+            .setNegativeButton(resources.getString(R.string.cancel)) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
+    }
+
+    private fun sendCustomBroadcast() {
+        val intent = Intent("com.example.SHARE_ACTION")
+        sendBroadcast(intent)
     }
 }

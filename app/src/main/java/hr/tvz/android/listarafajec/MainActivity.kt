@@ -102,13 +102,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         adapter.setOnItemClickListener(object : CarAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
-                //Toast.makeText(this@MainActivity, "You clicked item no. ${position + 1}", Toast.LENGTH_SHORT).show()
-
                 val intent = Intent(this@MainActivity, CarDetail::class.java)
-                /*intent.putExtra("heading", "${carArrayList[position].make} ${carArrayList[position].model}")
-                intent.putExtra("imageId", carArrayList[position].titleImage)
-                intent.putExtra("year", carArrayList[position].year)
-                intent.putExtra("hp", carArrayList[position].horsePower)*/
                 intent.putExtra("car", carArrayList[position])
 
                 startActivity(intent)

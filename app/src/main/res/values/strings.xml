@@ -12,8 +12,8 @@
     <string-array name="civic">
         <item>Honda</item>
         <item>Civic</item>
-        <item>2023</item>
-        <item>158</item>
+        <item>1995</item>
+        <item>90</item>
         <item>The Honda Civic, a symbol of practicality and performance, returns in 2023 with refreshed style and enhanced features. Renowned for its spacious interior, smooth handling, and fuel efficiency, the Civic remains a top choice for those seeking a blend of comfort and excitement on the road.</item>
     </string-array>
 
@@ -41,4 +41,11 @@
         <item>The BMW 3 Series sets the benchmark for luxury compact sedans, blending elegance with dynamic performance. As a symbol of driving pleasure, the 3 Series combines cutting-edge technology with precision engineering to deliver a thrilling ride. Whether cruising along the highway or tackling winding roads, this iconic BMW continues to captivate drivers with its sophisticated design and unmatched performance.</item>
     </string-array>
 
+    <string name="share">Share</string>
+    <string name="shareContent">Share Content</string>
+    <string name="confirm">Do you want to share this content?</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="horsepower">Horsepower: </string>
+    <string name="year">Year: </string>
 </resources>
