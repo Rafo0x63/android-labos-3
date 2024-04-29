@@ -3,12 +3,13 @@ package hr.tvz.android.listarafajec
 import android.os.Parcel
 import android.os.Parcelable
 
-class Car(val make: String, val model: String, val year: Int, val horsePower: Int, val titleImage : Int) : Parcelable {
+class Car(val make: String, val model: String, val year: Int, val horsePower: Int, val description: String, val titleImage : Int) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readInt(),
         parcel.readInt(),
+        parcel.readString()!!,
         parcel.readInt()
     )
 
@@ -17,6 +18,7 @@ class Car(val make: String, val model: String, val year: Int, val horsePower: In
         parcel.writeString(model)
         parcel.writeInt(year)
         parcel.writeInt(horsePower)
+        parcel.writeString(description)
         parcel.writeInt(titleImage)
     }
 

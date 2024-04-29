@@ -1,6 +1,9 @@
 package hr.tvz.android.listarafajec
 
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -18,13 +21,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var carArrayList: ArrayList<Car>
     lateinit var imageId : Array<Int>
-    lateinit var cars : ArrayList<Car>
+
+    val receiver = AirplaneModeReceiver()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         val view = binding.root
         setContentView(view)
+
+        registerReceiver(receiver, IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED))
 
         imageId = arrayOf(
             R.drawable.corolla,
@@ -41,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                 resources.getStringArray(R.array.corolla)[1], // Corolla
                 resources.getStringArray(R.array.corolla)[2].toInt(), // 2023
                 resources.getStringArray(R.array.corolla)[3].toInt(), // 150
+                resources.getStringArray(R.array.corolla)[4],
                 imageId[0]
             )
         )
@@ -50,6 +58,8 @@ class MainActivity : AppCompatActivity() {
                 resources.getStringArray(R.array.civic)[1], // Civic
                 resources.getStringArray(R.array.civic)[2].toInt(), // 2023
                 resources.getStringArray(R.array.civic)[3].toInt(), // 158
+                resources.getStringArray(R.array.civic)[4],
+
                 imageId[1]
             )
         )
@@ -59,6 +69,7 @@ class MainActivity : AppCompatActivity() {
                 resources.getStringArray(R.array.focus)[1], // Focus
                 resources.getStringArray(R.array.focus)[2].toInt(), // 2023
                 resources.getStringArray(R.array.focus)[3].toInt(), // 123
+                resources.getStringArray(R.array.focus)[4],
                 imageId[2]
             )
         )
@@ -68,6 +79,7 @@ class MainActivity : AppCompatActivity() {
                 resources.getStringArray(R.array.camaro)[1], // Camaro
                 resources.getStringArray(R.array.camaro)[2].toInt(), // 2023
                 resources.getStringArray(R.array.camaro)[3].toInt(), // 275
+                resources.getStringArray(R.array.camaro)[4],
                 imageId[3]
             )
         )
@@ -77,6 +89,7 @@ class MainActivity : AppCompatActivity() {
                 resources.getStringArray(R.array.bmw3)[1], // 3 Series
                 resources.getStringArray(R.array.bmw3)[2].toInt(), // 2023
                 resources.getStringArray(R.array.bmw3)[3].toInt(), // 248
+                resources.getStringArray(R.array.bmw3)[4],
                 imageId[4]
             )
         )
@@ -102,6 +115,4 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
-
 }
