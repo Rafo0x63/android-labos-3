@@ -1,5 +1,6 @@
 package hr.tvz.android.listarafajec
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -42,6 +43,15 @@ class CarDetail : AppCompatActivity() {
         carDesc.text = car.description
 
         val imageView: ImageView = binding.image
+
+        carHeading.setOnClickListener {
+            val duration = 1500L
+            val amplitude = 15f
+
+            val animator = ObjectAnimator.ofFloat(carHeading, "rotation", 0f, amplitude, -amplitude, amplitude, -amplitude, 0f)
+            animator.duration = duration
+            animator.start()
+        }
 
         imageView.setOnClickListener {
             val intent = Intent(this@CarDetail, ImageActivity::class.java)
