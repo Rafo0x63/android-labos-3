@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ListaRafajec"
+rootProject.name = "FragmentiRafajec"
 include ':app'

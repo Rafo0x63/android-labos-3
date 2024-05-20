@@ -1,4 +1,4 @@
-package hr.tvz.android.listarafajec
+package hr.tvz.android.fragmentirafajec
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 
-class CarAdapter(private val carList: ArrayList<Car>) : RecyclerView.Adapter<CarAdapter.CarViewHolder>() {
+class CarAdapter(private val carList: List<Car>) : RecyclerView.Adapter<CarAdapter.CarViewHolder>() {
 
     private lateinit var mListener : onItemClickListener
 

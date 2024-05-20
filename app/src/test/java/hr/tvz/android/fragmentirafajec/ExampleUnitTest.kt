@@ -1,4 +1,4 @@
-package hr.tvz.android.listarafajec
+package hr.tvz.android.fragmentirafajec
 
 import org.junit.Test
 

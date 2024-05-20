@@ -1,14 +1,29 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.0.4")
+        classpath("com.google.gms:google-services:4.3.10")
+    }
+}
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
+    id("com.google.gms.google-services")
 }
 
+apply plugin: 'com.android.application'
+
 android {
-    namespace 'hr.tvz.android.listarafajec'
+    namespace 'hr.tvz.android.fragmentirafajec'
     compileSdk 34
 
     defaultConfig {
-        applicationId "hr.tvz.android.listarafajec"
+        applicationId "hr.tvz.android.fragmentirafajec"
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -42,7 +57,16 @@ dependencies {
     implementation libs.material
     implementation libs.androidx.activity
     implementation libs.androidx.constraintlayout
+    implementation libs.firebase.messaging.ktx
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+    implementation libs.androidx.room.runtime
+    annotationProcessor libs.androidx.room.compiler
+    kapt libs.androidx.room.compiler
+    implementation platform('com.google.firebase:firebase-bom:33.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
 }
+

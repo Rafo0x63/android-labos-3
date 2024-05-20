@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddCar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/editTextCarId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/editTextCarMake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Make"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/editTextCarModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Model"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/editTextCarYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/editTextCarHorsePower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Horse Power"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextCarDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:minLines="3"/>
+
+            <EditText
+                android:id="@+id/editTextCarTitleImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title Image Resource ID"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/buttonAddCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Car"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

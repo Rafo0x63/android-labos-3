@@ -1,10 +1,25 @@
-package hr.tvz.android.listarafajec
+package hr.tvz.android.fragmentirafajec
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.annotation.NonNull
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import org.jetbrains.annotations.NotNull
 
-class Car(val make: String, val model: String, val year: Int, val horsePower: Int, val description: String, val titleImage : Int) : Parcelable {
+@Entity(tableName = "cars")
+class Car(
+    @PrimaryKey val id: Int,
+    @ColumnInfo(name = "make") val make: String,
+    @ColumnInfo(name = "model") val model: String,
+    @ColumnInfo(name = "year") val year: Int,
+    @ColumnInfo(name = "horsePower") val horsePower: Int,
+    @ColumnInfo(name = "description") val description: String,
+    @ColumnInfo(name = "titleImage") val titleImage: Int
+) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readInt(),
@@ -12,6 +27,10 @@ class Car(val make: String, val model: String, val year: Int, val horsePower: In
         parcel.readString()!!,
         parcel.readInt()
     )
+
+    constructor(make: String, model: String, year: Int, horsePower: Int, description: String, titleImage: Int) :
+            this(0, make, model, year, horsePower, description, titleImage) // Call the primary constructor with default id
+
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(make)

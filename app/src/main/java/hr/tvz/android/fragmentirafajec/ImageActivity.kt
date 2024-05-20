@@ -1,4 +1,4 @@
-package hr.tvz.android.listarafajec
+package hr.tvz.android.fragmentirafajec
 
 import android.os.Bundle
 import android.widget.ImageView

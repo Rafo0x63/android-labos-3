@@ -1,9 +1,8 @@
-package hr.tvz.android.listarafajec
+package hr.tvz.android.fragmentirafajec
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.provider.Settings
 import android.widget.Toast
 
 class AirplaneModeReceiver: BroadcastReceiver() {

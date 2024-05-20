@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614879559720",
+    "project_id": "androidlabos-b9441",
+    "storage_bucket": "androidlabos-b9441.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614879559720:android:ec5596685d6d42f969f51d",
+        "android_client_info": {
+          "package_name": "hr.tvz.android.fragmentirafajec"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArNctfzVdoIkXTKEvmb9Q6X5y_4Vz112s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
