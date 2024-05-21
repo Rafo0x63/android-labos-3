@@ -43,15 +43,6 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
 
-        if (intent != null && intent.hasExtra("fragmentToLoad")) {
-            val fragmentToLoad = intent.getStringExtra("fragmentToLoad")
-            if (fragmentToLoad == "AddCar") {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, AddCar())
-                    .commit()
-            }
-        }
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 MOJ_KANAL,

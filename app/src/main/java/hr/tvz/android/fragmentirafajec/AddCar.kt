@@ -22,6 +22,14 @@ class AddCar : Fragment(R.layout.fragment_add_car) {
         super.onCreate(savedInstanceState)
         binding = FragmentAddCarBinding.inflate(layoutInflater)
 
+        val imagesArray = arrayOf(
+            R.drawable.civic,
+            R.drawable.bmw3,
+            R.drawable.camaro,
+            R.drawable.corolla,
+            R.drawable.focus,
+        )
+
         db = Room.databaseBuilder(
             requireContext(),
             AppDatabase::class.java, "database-name"
@@ -30,7 +38,6 @@ class AddCar : Fragment(R.layout.fragment_add_car) {
             .build()
 
         binding.buttonAddCar.setOnClickListener {
-            val id = binding.editTextCarId.text.toString().toInt()
             val make = binding.editTextCarMake.text.toString()
             val model = binding.editTextCarModel.text.toString()
             val year = binding.editTextCarYear.text.toString().toInt()
@@ -38,7 +45,7 @@ class AddCar : Fragment(R.layout.fragment_add_car) {
             val description = binding.editTextCarDescription.text.toString()
             val titleImage = binding.editTextCarTitleImage.text.toString().toInt()
 
-            val car = Car(id, make, model, year, horsePower, description, R.drawable.civic)
+            val car = Car(make, model, year, horsePower, description, imagesArray[titleImage - 1])
 
             val result = db.carDao().insertCar(car)
 

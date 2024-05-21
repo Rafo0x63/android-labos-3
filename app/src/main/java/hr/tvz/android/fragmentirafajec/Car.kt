@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull
 
 @Entity(tableName = "cars")
 class Car(
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "make") val make: String,
     @ColumnInfo(name = "model") val model: String,
     @ColumnInfo(name = "year") val year: Int,

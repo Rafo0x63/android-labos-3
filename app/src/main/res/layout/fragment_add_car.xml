@@ -17,13 +17,6 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/editTextCarId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="ID"
-                android:inputType="number"/>
-
-            <EditText
                 android:id="@+id/editTextCarMake"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

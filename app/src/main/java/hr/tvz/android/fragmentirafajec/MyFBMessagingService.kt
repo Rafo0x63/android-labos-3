@@ -12,36 +12,34 @@ import com.google.firebase.messaging.RemoteMessage
 
 class MyFBMessagingService: FirebaseMessagingService() {
 
-    private val TAG = " FCM Service"
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         showNotification(remoteMessage.notification?.title, remoteMessage.notification?.body)
     }
 
+
+
     private fun showNotification(title: String?, message: String?) {
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel("mojKanal", "Kanal 1", NotificationManager.IMPORTANCE_DEFAULT)
             notificationManager.createNotificationChannel(channel)
         }
 
-        val intent = Intent(this, MainActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            putExtra("fragmentToLoad", "AddCar") // Add extra to specify the fragment
-        }
+        val intent = Intent(this, MainActivity::class.java)
 
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent,
-            PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE)
-
+        val pendingIntent = PendingIntent.getActivity(
+            this,
+            0,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
 
         val notificationBuilder = NotificationCompat.Builder(this, "mojKanal")
             .setSmallIcon(R.drawable.ic_launcher_background)
             .setContentTitle(title)
             .setContentText(message)
-            .setAutoCancel(true)
-
-
+            .setContentIntent(pendingIntent)
 
         notificationManager.notify(0, notificationBuilder.build())
     }
